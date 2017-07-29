@@ -1,0 +1,10 @@
+java Test D1kT10N500.txt 0.01 0.5 > D1kT10N500_10_5.txt
+java Test D1kT10N500.txt 0.009 0.5 > D1kT10N500_9_5.txt
+java Test D1kT10N500.txt 0.008 0.5 > D1kT10N500_8_5.txt
+java Test D1kT10N500.txt 0.007 0.5 > D1kT10N500_7_5.txt
+java Test D1kT10N500.txt 0.006 0.5 > D1kT10N500_6_5.txt
+java Test D1kT10N500.txt 0.005 0.5 > D1kT10N500_5_5.txt
+java Test D1kT10N500.txt 0.004 0.5 > D1kT10N500_4_5.txt
+java Test D1kT10N500.txt 0.003 0.5 > D1kT10N500_3_5.txt
+java Test D1kT10N500.txt 0.002 0.5 > D1kT10N500_2_5.txt
+java Test D1kT10N500.txt 0.001 0.5 > D1kT10N500_1_5.txt

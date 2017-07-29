@@ -1,0 +1,2 @@
+Threshold of Support:0.001
+Threshold of Confidence:0.5
