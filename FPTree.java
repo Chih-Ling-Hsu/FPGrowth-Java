@@ -41,6 +41,35 @@ public class FPTree {
         }
     }
 
+    public void insertItemsToNode(TreeNode node, String[] itemset, int index){
+        if(index>=itemset.length){
+            return;
+        }
+        else{    
+            String item = itemset[index];
+            Boolean added = false;
+            // Increment occurence record at every inserted node        
+            List<TreeNode> children = node.getChildren();
+            for (TreeNode child: children){
+                if(child.getItem().equals(item)){
+                    child.incrementCount();
+                    //System.out.println(child.toString());
+                    insertItemsToNode(child, itemset, index+1);
+                    added = true;
+                    break;
+                }
+            }
+
+            if(!added){
+                // Create a new child node if reaching the leaf node before the insersion completes.
+                TreeNode child = createNewChild(node, item);
+                node.addChild(child);
+                //System.out.println(child.toString());
+                insertItemsToNode(child, itemset, index+1);
+            }
+        }
+    }
+
     private TreeNode createNewChild(TreeNode parent, String item){
         TreeNode child = new TreeNode(item, parent);
 

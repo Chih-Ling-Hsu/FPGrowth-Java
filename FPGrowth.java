@@ -27,9 +27,11 @@ public class FPGrowth{
     public FPGrowth(String[] args){
         inputPath = args[0];
         minSup = Double.valueOf(args[1]).doubleValue();
-        minConf = Double.valueOf(args[2]).doubleValue();
         log("Threshold of Support:" + minSup);
-        log("Threshold of Confidence:" + minConf);  
+        if(args.length>=3){
+            minConf = Double.valueOf(args[2]).doubleValue();
+            log("Threshold of Confidence:" + minConf);  
+        }
     }
 
     public Map<String, Double> findAssociationRules(){
@@ -243,7 +245,9 @@ public class FPGrowth{
             link = link.getNext();
         }
         //log("---------");
-
+        if(suffix.length()!=0){
+            tree = null;
+        }
         if(conditionalPtnBases.isEmpty()){
             return;
         }

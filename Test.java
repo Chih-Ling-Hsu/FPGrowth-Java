@@ -27,6 +27,10 @@ public class Test{
 
         checkMemory();
 
+        if(args.length<3){
+            return;
+        }
+
         
         instance.gc();
         start = System.nanoTime();     
